@@ -1,0 +1,6 @@
+[myself]
+localhost
+
+[intranetweb]
+servera.example.com
+serverb.example.com

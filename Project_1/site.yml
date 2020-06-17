@@ -1,0 +1,20 @@
+---
+- name: Install and start Apache Httpd
+  hosts: intranetweb
+  tasks:
+          - name: Install Httpd Package
+            yum:
+                    name: httpd
+                    state: present
+
+          - name: Copy index.html file to the location for test
+            copy:
+                    src: files/index.html
+                    dest: /var/www/html/index.html
+
+
+          - name: Start the httpd service
+            service:
+                    name: httpd
+                    state: started
+                    enabled: true 
