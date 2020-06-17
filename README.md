@@ -7,5 +7,6 @@ In this playbook three modules are used
  - yum
  - copy
  - service
-These modules are used for Installing httpd  , copying file to the correct location and Starting the service of httpd
-respectively.
+
+These modules are used for Installing httpd,copying file to the correct location and
+ starting the service of httpd respectively.
