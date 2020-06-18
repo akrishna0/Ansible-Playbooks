@@ -1,6 +1,6 @@
 ---
 - name: Enable intranet services
-  hosts: servera.example.com
+  hosts: server*
   tasks:
           - name: latest version of httpd and firewalld installed
             yum:
@@ -33,7 +33,7 @@
                     enabled: true
                     state: started
 
-- name: Test intranet web server
+- name: Test the web server
   hosts: localhost
   become:  no
   tasks:
