@@ -1,0 +1,45 @@
+---
+- name: Enable intranet services
+  hosts: servera.example.com
+  tasks:
+          - name: latest version of httpd and firewalld installed
+            yum:
+                    name:
+                            - httpd
+                            - firewalld
+                    state: latest
+
+          - name: test html page is deployed on it's location correctly
+            copy:
+                    content: "Welcome to our second playbook.\n"
+                    dest: /var/www/html/index.html
+
+          - name: firewalld enabled and running
+            service:
+                    name: firewalld
+                    enabled: true
+                    state: started
+
+          - name: firewalld permits access to httpd service
+            firewalld:
+                    service: http
+                    permanent: true
+                    state:  enabled
+                    immediate:  yes
+
+          - name: httpd and firewall enabled and running
+            service:
+                    name: httpd
+                    enabled: true
+                    state: started
+
+- name: Test intranet web server
+  hosts: localhost
+  become:  no
+  tasks:
+          - name: connect to the web server
+            uri:
+                    url: http://servera.example.com
+                    return_content: yes
+                    status_code: 200
+
