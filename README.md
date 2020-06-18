@@ -24,5 +24,4 @@ Modules Used :
  - copy
  - service
  - firewalld
-In the second play :
  - uri
