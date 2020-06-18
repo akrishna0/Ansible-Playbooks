@@ -1,0 +1,11 @@
+[myself]
+localhost
+
+[web]
+servera.example.com
+serverb.example.com
+
+[database]
+db1.example.com
+db2.example.com
+
