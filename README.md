@@ -25,3 +25,13 @@ Modules Used :
  - service
  - firewalld
  - uri
+
+### Project3
+
+In this playbook we are using variables in place of directly using name of the packages ,services and rules.
+
+variables are defined using vars keyword.
+To call a variable anywhere in the playbook we have to use {{variable-name}}.
+vars:
+    variable_name: value
+    
