@@ -1,0 +1,14 @@
+localhost
+
+[web]
+servera.example.com
+serverb.example.com
+
+
+[datacenter]
+data1.example.com
+data2.example.com
+
+[server:children]
+web
+datacenter
