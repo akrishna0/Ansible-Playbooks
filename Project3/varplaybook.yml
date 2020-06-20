@@ -29,5 +29,16 @@
                     enabled: true
                     state: started
 
+          - name: Check the web content is on its correct position
+            copy:
+                    content: "This is the web content to test the content in the file"
+                    dest: /var/www/html/index.html
+
+          - name: To open the firewall ports  required port is "{{rule}}"
+            firewalld:
+                    service: "{{rule}}"
+                    permanent: true
+                    immediate: true
+                    state: enabled
 
           
