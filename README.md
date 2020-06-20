@@ -1,27 +1,27 @@
 # Ansible-Playbooks ![Ansible Logo](/assets/ansible_logo.png)
 
-##Installing Ansible
+## Installing Ansible
 
-###Prerequisites
+### Prerequisites
 We install ansible on a control node, which then uses SSH to communicate with 
 managed hosts (devices we want to automate)
-####On Control Node
+#### On Control Node
 Python 2(version 2.7) or Python3(verssn 3.5 or higher)installed.
 
 Windows is not supported for control node.
 
-####On Managed Host
+#### On Managed Host
 For communication between managed host and control node SSH is required.
 
 Python 2(version 2.7) or Python3(verssn 3.5 or higher)installed.
 
-######Fedora
+###### Fedora
  sudo dnf install ansible
 
-######RHEL and CentOS
+###### RHEL and CentOS
  sudo yum install ansible
 
-######Ubuntu
+###### Ubuntu
  sudo apt update
  sudo apt install software-properties-common
  sudo apt-add-repository --yes --update ppa:ansible/ansible
