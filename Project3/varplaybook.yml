@@ -1,0 +1,33 @@
+---
+- name: Using variables to deploy web server and testing it.
+  hosts: server
+  vars:
+          web_pkg: httpd
+          firewall_pkg: firewalld
+          web_service: httpd
+          firewall_service: firewalld
+          python_pkg: python3-PyMySQL
+          rule: http
+  tasks:
+          - name: Required packages to be installed and updated
+            yum:
+                    name:
+                            - "{{web_pkg}}"
+                            - "{{firewall_pkg}}"
+                            - "{{python_pkg}}"
+                    state: latest
+
+          - name: Start the {{firewall_service}} service and enable it.
+            service:
+                    name: "{{firewall_service}}"
+                    enabled: true
+                    state: started
+
+          - name: Start the {{we_service}} service and enable it.
+            service:
+                    name: "{{web_service}}"
+                    enabled: true
+                    state: started
+
+
+          
