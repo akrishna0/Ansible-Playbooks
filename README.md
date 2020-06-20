@@ -32,6 +32,6 @@ In this playbook we are using variables in place of directly using name of the p
 
 variables are defined using vars keyword.
 To call a variable anywhere in the playbook we have to use {{variable-name}}.
-vars:
-    variable_name: value
+* vars:
+     * variable_name: value
     
