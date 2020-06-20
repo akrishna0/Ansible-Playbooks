@@ -1,4 +1,4 @@
-# Ansible-Playbooks ![Ansible Logo] (/assets/ansible_logo.png)
+# Ansible-Playbooks ![Ansible Logo](/assets/ansible_logo.png)
 
 ### Project1
 
