@@ -23,8 +23,11 @@ Python 2(version 2.7) or Python3(verssn 3.5 or higher)installed.
 
 ###### Ubuntu
  sudo apt update
+
  sudo apt install software-properties-common
+
  sudo apt-add-repository --yes --update ppa:ansible/ansible
+
  sudo apt install ansible
 
 
