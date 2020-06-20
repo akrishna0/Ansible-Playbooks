@@ -41,4 +41,12 @@
                     immediate: true
                     state: enabled
 
-          
+
+- name: Verify the apache service
+  hosts: localhost
+  become: false
+  tasks:
+          - name: Ensure the webserver is reachable
+            uri:
+                    url: http://servera.lab.example.com
+                    status_code: 200
