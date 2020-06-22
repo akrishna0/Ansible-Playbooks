@@ -68,7 +68,7 @@ To call a variable anywhere in the playbook we have to use {{variable-name}}.
     
 ### Project4
 
-In this playbook we are managing secrets by using * Ansible Vault * which is included with Ansible , can be used 
+In this playbook we are managing secrets by using *Ansible Vault* which is included with Ansible , can be used 
 to encrypt and decrypt any structured data file used by Ansible and  make secure our playbook, inventory variables 
 or variable files etc.
 
