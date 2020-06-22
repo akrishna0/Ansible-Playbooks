@@ -66,3 +66,35 @@ To call a variable anywhere in the playbook we have to use {{variable-name}}.
 * vars:
       variable_name: value
     
+### Project4
+
+In this playbook we are managing secrets by using * Ansible Vault * which is included with Ansible , can be used 
+to encrypt and decrypt any structured data file used by Ansible and  make secure our playbook, inventory variables 
+or variable files etc.
+
+#### Creating an Encrypted File
+ 
+ ansible-vault create filename
+
+#### Viewing an Encrypted File
+ 
+ ansible-vault view filename
+
+#### Editing an Existing Encrypted File
+
+ ansible-vault edit filename
+
+#### Encrypting and Decrypting an Existing File 
+  
+ ansible-vault encrypt filename
+
+ ansible-vault decrypt filename
+
+#### To change the password
+
+ ansible-vault rekey filename
+
+
+
+
+
